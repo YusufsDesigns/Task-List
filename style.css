@@ -1,0 +1,251 @@
+:root{
+    --primary-color: #0818A8;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+h1, h2, h3{
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+p{
+    margin: 10px 0;
+}
+
+img{
+    width: 100%;
+}
+
+code, pre{
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.btn{
+    font-size: 16px;
+    display: inline-block;
+    padding: 5px 10px;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 6px;
+}
+
+button{
+    outline: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+input::placeholder{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Card */
+.card{
+    position: relative;
+    margin: 3rem 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+.card-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 50px;
+    padding: 2rem;
+}
+
+.card-action{
+    display: flex;
+}
+
+.input-field{
+    position: relative;
+    height: 40px;
+    width: 300px;
+    margin: 0 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 6px;
+    padding: .1rem;
+}
+
+.input-field input{
+    width: 90%;
+    height: 10%;
+    padding: 1rem;
+    border-color: var(--primary-color);
+    outline: none;
+    border: none;
+}
+
+.input-field .fa-magnifying-glass{
+    position: absolute;
+    color: var(--primary-color);
+    right: 10px;
+    top: 10px;
+    margin-left: 20px;
+    background: #fff;
+}
+
+.task-button{
+    position: relative;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 50%;
+    text-align: center;
+    transition: .3s;
+}
+
+.task-button:hover{
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.task-button:hover span{
+    display: block;
+    
+}
+
+.task-button span{
+    display: none;
+    position: absolute;
+    font-size: 8px;
+    bottom: -25px;
+    left: -5px;
+    padding: 5px;
+    border-radius: 6px;
+    width: 50px;
+    line-height: 1;
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.task-button span::before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 18px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0px 4px 8px 4px;
+    border-color: transparent transparent var(--primary-color) transparent;
+}
+
+.modal{
+    width: 100%;
+    height: 100%;
+    background: black;
+}
+
+.task-card{
+    position: absolute;
+    display: none;
+    left: 200px;
+    top: 100px;
+    width: 400px;
+    height: 120px;
+    padding: 20px;
+    border-left: 5px solid var(--primary-color);
+    background: #fff;
+    box-shadow: 0 30px 50px rgba(0,0,0,0.3),0 -5px 20px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    animation: taskcard .5s;
+}
+
+@keyframes taskcard{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+.task-card input{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.task-card div{
+    margin-top: 10px;
+    text-align: end;
+}
+
+.task-card .remove-task-card{
+    background: #f2f2f2;
+    color: #000;
+    margin-right: 5px;
+}
+
+.task-card .remove-task-card:hover{
+    background: #c8c6c6;
+}
+
+.task-card .add-task{
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    padding: 5px 10px;
+    background: var(--primary-color);
+}
+
+.card-list{
+    padding: 2rem;
+}
+
+.task-item{
+    border-left: 5px solid var(--primary-color);
+    padding: 1rem;
+    margin: 30px 0;
+}
+
+.task-item .task-icon{
+    float: right;
+    color: var(--primary-color);
+    font-size: 22px;
+}
+
+.task-item .task-icon:hover{
+    color: #4354ed;
+}
+
+
+

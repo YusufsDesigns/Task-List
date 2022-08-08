@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Task List</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-top">
+                <h1>Task List</h1>
+                <div class="card-action">
+                    <div class="input-field">
+                        <input type="text" name="filter" id="filter" placeholder="Filter tasks" autocomplete="on" autocomplete-placement="right" placeholder>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="task-button">
+                        <i class="fa-solid fa-plus"></i>
+                        <span>Add task</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-list">
+                <h2>Tasks</h2>
+                <ul class="task-collection"></ul>
+                <a href="#" class="btn clear-tasks">Clear Tasks</a>
+            </div>
+            <div class = "modal">
+                <form class="task-card">
+                    <input type="text" name="task" id="task" placeholder="Task..." autocomplete="on">
+                    <div>
+                        <a href="#" class="btn remove-task-card">Cancel</a>
+                        <button type="submit" class="btn add-task">Add Task</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/app.js"></script>
+</body>
+</html>
